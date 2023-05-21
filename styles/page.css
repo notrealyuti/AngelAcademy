@@ -10,3 +10,12 @@ body {
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
 }
+
+ul.dropdown-menu {
+    background-color: blueviolet;
+}
+
+.change-dropdown-menu {
+    background-color: blueviolet;
+}
+

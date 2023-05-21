@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" type="text/css" href="../styles/page.css">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ" crossorigin="anonymous">
+    <link rel="icon" type="image/x-icon" href="../assets/favicon.ico">
     <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
 
 
@@ -22,24 +23,29 @@
       });
       </script>
 
-    <div style="padding-left: 40%; padding-right: 40%; padding-top: 10%;">
-      <span class="GoldText" style="font-size: 50px; font-weight: 500; "> Log In </span>
+    <div style="padding-left: 35%; padding-right: 35%; padding-top: 10%;">
+      <p class="GoldText" style="font-size: 50px; font-weight: 500; text-align: center; padding-bottom: 2%;"> Log In </p>
       
 
       <div class="form-outline">
-          <input type="email" id="emailID" class="form-control"/>
-          <label class="form-label GoldText"> <span style="color: #0d6efd">Email</span> </label>
+          <input type="email" id="emailID" class="form-control" placeholder="Email"/>
+          <label class="form-label GoldText"> Email </label>
       </div>
 
       <div class="form-outline">
-          <input type="password" id="passwordID" class="form-control"/>
-          <label class="form-label GoldText"> <span style="color: #0d6efd">Password</span> </label>
+          <input type="password" id="passwordID" class="form-control" placeholder="Password"/>
+          <label class="form-label GoldText"> Password </label>
+      </div>
+
+      <a href="signup.html"> <p class="GoldText" style="text-align: center"> Don't you have an account? </p></a>
+
+
+
+      <div class="text-center" style="padding-top: 5%;">
+          <button type="button" class="btn btn-outline-warning">Login</button>
       </div>
 
 
-      <div class="text-center" style="padding-top: 20%;">
-          <button type="button" class="btn btn-dark GoldText">Login</button>
-      </div>
     </div>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe" crossorigin="anonymous"></script>
