@@ -25,9 +25,79 @@
     
     
 
-<p class="GoldText" style="font-size:30px; font-weight: bold">
-    BEAT
+<p class="GoldText" style="font-size:30px; font-weight: bold; text-align: center">
+    BEATS
 </p>
+
+<div id="js-pushdata" style="float: right"></div>
+
+    <script>
+      let container = document.getElementById("js-pushdata");
+      let elements = [
+        {
+          "artist": "sgara",
+          "name": "drum + kick",
+          "img": "../assets/Album/hellvisback.jpg",
+          "beat": "../assets/Beats/bosh.mp3"
+        },
+        {
+          "artist": "NF",
+          "name": "Hope",
+          "img": "../assets/Album/shiva.jpg",
+          "beat": "../assets/Beats/bosh.mp3"
+        },
+        {
+          "artist": "Eminem",
+          "name": "Encore",
+          "img": "../assets/Album/blocco181.jpg",
+          "beat": "../assets/Beats/bosh.mp3"
+        },
+        {
+          "artist": "Salmo",
+          "name": "Flop",
+          "img": "../assets/Album/album2.jpg",
+          "beat": "../assets/Beats/bosh.mp3"
+        },
+      ];
+
+      function buildElement(jsonEl){
+        let element = document.createElement("div");
+        let artist = document.createElement("p");
+        let name = document.createElement("name");
+        let img = document.createElement("img");
+        let beat = document.createElement("beat");
+
+        element.style = "width: 200px; border: 3px solid gray; border-radius: 18px; "
+
+        artist.innerText = jsonEl.artist;
+        artist.classList.add("GoldText");
+        artist.style = "font-size: 15px; text-align: center; padding-top: 0px; "
+
+        name.innerText = jsonEl.name;
+        name.classList.add("GoldText");
+        name.style = "font-size: 20px; padding-left: 10px; "
+        
+        
+        img.src = jsonEl.img;
+        img.style = "width: 20%; padding-top: 15px; padding-left: 5px";
+
+        
+
+        element.classList.add("beatDiv");
+        element.appendChild(img);
+        element.appendChild(name);
+        element.appendChild(artist);
+        
+        
+
+        return element;
+      }
+      for(let el of elements) {
+        container.appendChild(buildElement(el));
+        
+        
+      }
+    </script>
   
 
 

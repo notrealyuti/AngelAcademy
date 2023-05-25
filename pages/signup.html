@@ -9,7 +9,7 @@
     <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
 
 
-    <title>Angel Academy | Login</title>
+    <title>Angel Academy | Sign Up</title>
   
   </head>
 
@@ -57,7 +57,7 @@
     <p id="res" class="GoldText" style="font-size: 20px; float: right"></p>
 
       <div class="text-center" style="padding-top: 5%;  ">
-          <button type="button" class="btn btn-outline-warning" onclick="verifyPasswords()">Register</button>
+          <button type="button" class="btn" style="background-color: rgb(221, 173, 96)" onclick="verifyPasswords()">Register</button>
       </div>
 
 
@@ -68,7 +68,7 @@
                 document.getElementById("res").innerHTML = "Passwords must be equal";
             }
             else {
-                document.getElementById("res").innerHTML = "T'appost";
+                document.getElementById("res").innerHTML = "Registered.";
             }
         }
 

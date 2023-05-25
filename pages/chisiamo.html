@@ -25,13 +25,29 @@
 
         <div style="text-align: center; float: center">
           <p class="GoldText" style="font-size: 40px; padding-top: 20px">CHI SIAMO</p>
-          <img src="../assets/chisiamo.png" width="60%" style="border: 8px groove yellow">
+          <img id="paint" src="../assets/Resources/chisiamo0.png" width="60%" style="outline: 15px ridge gold " onclick="changePaint()">
+
+          <script>
+            let pressed = 0;
+
+
+            function changePaint() {
+              pressed++;
+              if ( pressed == 2)
+                pressed = 0;
+
+              var img = document.getElementById("paint");
+
+              img.src = "../assets/Resources/chisiamo" + pressed + ".png";
+
+            }
+          </script>
+
 
           <p class="GoldText" style="font-size: 20px; padding-top: 25px">
-            Siamo la giusta metà 3A INFO del istituto ITSOS Marie Curie di Cernusco sul Naviglio <br> 
-            il nostro piccolo team è diviso in designer, programmatori, producers e web developers
+            Siamo la giusta metà della 3A INFO del istituto ITSOS Marie Curie di Cernusco sul Naviglio <br> 
+            il nostro piccolo team è diviso in designer, programmatori, producers e web developers.
           </p>
-
 
         </div>
 
