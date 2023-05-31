@@ -1,13 +1,8 @@
 <!doctype html>
 <html lang="it">
     <head>
-        <meta charset="utf-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <link rel="stylesheet" type="text/css" href="../styles/page.css">
-        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ" crossorigin="anonymous">
-        <link rel="icon" type="image/x-icon" href="../assets/favicon.ico">
-        <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
 
+        <?php include "head.hmtl"?>
 
         <title>Angel Academy | Chi siamo </title>
       
@@ -24,27 +19,56 @@
 
 
         <div style="text-align: center; float: center">
-          <p class="GoldText" style="font-size: 40px; padding-top: 20px">CHI SIAMO</p>
+          <p class="GoldText" id="bigTitle" style="font-size: 40px; padding-top: 20px">CHI SIAMO</p>
           <img id="paint" src="../assets/Resources/chisiamo0.png" width="60%" style="outline: 15px ridge gold " onclick="changePaint()">
 
           <script>
             let pressed = 0;
+            let pressed2 = 0;
 
 
             function changePaint() {
+              var img = document.getElementById("paint");
               pressed++;
-              if ( pressed == 2)
+              pressed2++;
+
+              if ( pressed >= 2)
                 pressed = 0;
 
-              var img = document.getElementById("paint");
+              // Benty time
+              if (pressed2 == 7)
+                document.getElementById("bigTitle").innerText = "Meglio un 2 sudato che un 4 regalato. ~Benty"
 
-              img.src = "../assets/Resources/chisiamo" + pressed + ".png";
+                // Rise time
+              else if (pressed2 == 14) {
+                document.getElementById("bigTitle").innerText = "Rice caldo a 2KM da te";
+                document.getElementById("bigTitle").style = "font-size: 80px; padding-bottom: 0px";
 
+                document.getElementById("bigTitle").classList.remove("GoldText");
+                document.getElementById("bigTitle").classList.add("fire-text");
+
+
+                img.src = "../assets/Resources/riso.png";
+                img.style = "outline: 15px ridge red; height: 50%"
+
+
+              }
+              else {
+
+                img.src = "../assets/Resources/chisiamo" + pressed + ".png";
+                document.getElementById("bigTitle").classList.remove("fire-text");
+                document.getElementById("bigTitle").classList.add("GoldText");
+                document.getElementById("bigTitle").innerText = "CHI SIAMO"
+
+                img.style = "outline: 15px ridge gold;"
+                document.getElementById("bigTitle").style = "font-size: 40px";
+
+              }
             }
           </script>
 
 
-          <p class="GoldText" style="font-size: 20px; padding-top: 25px">
+          <p id="didascalia" class="GoldText" style="font-size: 20px; padding-top: 25px">
             Siamo la giusta metà della 3A INFO del istituto ITSOS Marie Curie di Cernusco sul Naviglio <br> 
             il nostro piccolo team è diviso in designer, programmatori, producers e web developers.
           </p>
